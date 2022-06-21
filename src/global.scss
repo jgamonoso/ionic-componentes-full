@@ -26,11 +26,14 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 
-// .redColour, .redColour .sc-ion-action-sheet-md {
-//   color: red !important;
-// }
-
 .md .action-sheet-destructive,
 .action-sheet-destructive .sc-ion-action-sheet-md {
     color:red !important;
+}
+
+.redColour, .redColour .sc-ion-action-sheet-md {
+  color: red !important;
+  .sc-ion-alert-md {
+    font-weight: bold;
+  }
 }
