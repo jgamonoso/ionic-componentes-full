@@ -1,0 +1,21 @@
+<app-header [titulo]="nombre || 'Input Forms'"></app-header>
+
+
+<ion-content class="ion-padding">
+
+  <ion-list>
+
+    <ion-list-header>
+      <ion-label>Input normales</ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Nombre:</ion-label>
+      <ion-input type="text" placeholder="Introduzca su nombre" [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
+
+<app-footer titulo="Footer"></app-footer>
