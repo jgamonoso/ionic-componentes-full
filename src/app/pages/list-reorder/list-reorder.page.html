@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="primary"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>List - Reorder</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="toggleReorderGroup()" color="tertiary">
+      <ion-icon name="lock-open" *ngIf="!reorderGroup?.disabled" color="success"></ion-icon>
+      <ion-icon name="lock-closed" *ngIf="reorderGroup?.disabled" color="danger"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-list>
+
+    <ion-reorder-group (ionItemReorder)="doReorder($event)"
+                       disabled="false">
+
+      <ion-item *ngFor="let personaje of personajes">
+        <ion-label>{{personaje}}</ion-label>
+        <ion-reorder slot="end"></ion-reorder>
+      </ion-item>
+
+    </ion-reorder-group>
+
+  </ion-list>
+
+</ion-content>
+
+<app-footer titulo="Footer"></app-footer>
