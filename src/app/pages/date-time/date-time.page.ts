@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DateTimePage implements OnInit {
 
-
   fechaNacimiento: Date = new Date();
 
   constructor() { }
@@ -16,7 +15,6 @@ export class DateTimePage implements OnInit {
   }
 
   cambioFecha(event){
-    console.log(event);
     console.log(new Date (event.detail.value));
   }
 
@@ -28,5 +26,13 @@ export class DateTimePage implements OnInit {
      * Sunday or Saturday
      */
     return utcDay !== 0 && utcDay !== 6;
+  }
+
+  cancel(){
+    console.log('cancel');
+  }
+
+  reset(){
+    console.log('reset');
   }
 }

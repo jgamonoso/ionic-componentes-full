@@ -28,6 +28,7 @@
     </ion-list-header>
 
     <ion-accordion-group>
+
       <ion-accordion value="first">
 
         <ion-item slot="header">
@@ -63,8 +64,37 @@
             slot="content"
             locale="es-ES"
             min="2022-05-05T00:00:00"
-            max="2022-07-28T23:59:59"
-            >
+            max="2022-07-28T23:59:59">
+        </ion-datetime>
+
+      </ion-accordion>
+
+
+
+      <ion-accordion value="third">
+
+        <ion-item slot="header">
+          <ion-label>Sesión 50 adaptation</ion-label>
+        </ion-item>
+
+        <ion-datetime #datetime
+            [value]="fechaNacimiento.toISOString()"
+            display-format="DD.MM.YYYY HH:mm"
+            (ionChange)="cambioFecha($event)"
+            [firstDayOfWeek]="1"
+            [isDateEnabled]="isWeekday"
+            id="datetime"
+            slot="content"
+            locale="es-ES"
+            min="2022-05-05T00:00:00"
+            max="2022-07-28T23:59:59">
+
+            <ion-buttons slot="buttons">
+              <ion-button color="danger" (click)="datetime.reset(); reset()">Reset</ion-button>
+              <ion-button color="primary" (click)="datetime.cancel(); cancel()">Cancel</ion-button>
+              <ion-button color="primary" (click)="datetime.confirm()">Confirm</ion-button>
+            </ion-buttons>
+
         </ion-datetime>
 
       </ion-accordion>
