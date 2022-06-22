@@ -1,0 +1,35 @@
+<app-header titulo="fab"></app-header>
+
+<ion-content class="ion-padding">
+
+  <!-- <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> -->
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button><ion-icon name="logo-facebook" (click)="whatIClick('facebook')"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-twitter" (click)="whatIClick('twitter')"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-youtube" (click)="whatIClick('youtube')"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="start">
+      <ion-fab-button><ion-icon name="logo-vimeo" (click)="whatIClick('vimeo')"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-google" (click)="whatIClick('google')"></ion-icon></ion-fab-button>
+      <ion-fab-button><ion-icon name="logo-github" (click)="whatIClick('github')"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-list>
+    <ion-item *ngFor="let item of data; let i = index">
+      <ion-label>item {{ i + 1}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<app-footer titulo="Footer"></app-footer>
