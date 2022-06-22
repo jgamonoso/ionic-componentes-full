@@ -1,0 +1,35 @@
+<app-header titulo="checks"></app-header>
+
+<ion-content class="ion-padding">
+
+
+  <ion-list>
+    <ion-item *ngFor="let item of data" (click)="onClick(item)">
+      <ion-label>{{item.name}}</ion-label>
+      <ion-checkbox slot="end" [color]="item.name" [(ngModel)]="item.selected"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-button (click)="verData()" expand="block">
+    Ver data
+  </ion-button>
+
+
+
+  <h3> Default Checkbox </h3>
+  <ion-checkbox></ion-checkbox>
+
+  <h3> Disabled Checkbox </h3>
+  <ion-checkbox disabled="true"></ion-checkbox>
+
+  <h3> Checked Checkbox </h3>
+  <ion-checkbox checked="true"></ion-checkbox>
+
+  <h3> Checkbox Checked Colors </h3>
+  <ion-checkbox color="primary" checked="true"></ion-checkbox>
+  <ion-checkbox color="secondary" checked="true"></ion-checkbox>
+  <ion-checkbox color="danger" checked="true"></ion-checkbox>
+  <ion-checkbox color="light" checked="true"></ion-checkbox>
+  <ion-checkbox color="dark" checked="true"></ion-checkbox>
+
+</ion-content>

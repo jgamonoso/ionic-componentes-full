@@ -7,6 +7,11 @@ const routes: Routes = [
     redirectTo: 'inicio',
     pathMatch: 'full'
   },
+  // {
+  //   path: '**',
+  //   redirectTo: 'inicio',
+  //   pathMatch: 'full'
+  // },
   {
     path: 'inicio',
     loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
@@ -36,9 +41,8 @@ const routes: Routes = [
     loadChildren: () => import('./pages/card/card.module').then( m => m.CardPageModule)
   },
   {
-    path: '**',
-    redirectTo: 'inicio',
-    pathMatch: 'full'
+    path: 'check',
+    loadChildren: () => import('./pages/check/check.module').then( m => m.CheckPageModule)
   },
 ];
 
