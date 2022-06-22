@@ -1,0 +1,22 @@
+<app-header titulo="List"></app-header>
+
+
+<ion-content class="ion-padding">
+
+
+  <ion-list *ngFor="let user of usuarios | async">
+    <ion-item>
+      <ion-label>
+        <h3>{{user.name}}</h3>
+        <p>{{user.email}}</p>
+      </ion-label>
+      <ion-label slot="end" class="ion-text-end text-small">
+        {{user.phone}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>
+
+<app-footer titulo="Footer"></app-footer>
