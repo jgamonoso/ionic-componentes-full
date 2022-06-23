@@ -18,8 +18,7 @@ export class ListPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.dataService.getUsuarios().subscribe(console.log)
-
+    // this.dataService.getUsuarios().subscribe(console.log);
     this.usuarios = this.dataService.getUsuarios();
   }
 
