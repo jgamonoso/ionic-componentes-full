@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Componente } from '../interfaces/interfaces';
+import { Componente, Superheroe } from '../interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -21,5 +21,10 @@ export class DataService {
 
   getAlbums() {
     return this.http.get('https://jsonplaceholder.typicode.com/albums');
+  }
+
+
+  getSuperheroes() {
+    return this.http.get<Superheroe[]>('/assets/data/superheroes.json');
   }
 }

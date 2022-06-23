@@ -20,9 +20,8 @@ export class FiltroPipe implements PipeTransform {
 
     texto = texto.toLocaleLowerCase();
 
-    console.log(arreglo);
-
-    console.log(texto);
+    // console.log(arreglo);
+    // console.log(texto);
 
     return arreglo.filter(
       item => item[columna]?.toLowerCase().includes(texto)
