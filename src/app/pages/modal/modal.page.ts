@@ -29,7 +29,10 @@ export class ModalPage implements OnInit {
     // const respuesta = await modal.onDidDismiss();
     // console.log(respuesta);
 
-    const { data } = await modal.onDidDismiss();
+    // const { data } = await modal.onDidDismiss();
+    // console.log(data);
+
+    const { data } = await modal.onWillDismiss();
     console.log(data);
   }
 }

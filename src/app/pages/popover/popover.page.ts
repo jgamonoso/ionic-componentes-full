@@ -9,8 +9,6 @@ import { PopoverInfoComponent } from 'src/app/components/popover-info/popover-in
 })
 export class PopoverPage implements OnInit {
 
-  // isPopoverOpen: boolean= false;
-
   constructor(
     public popoverController: PopoverController
   ) { }
@@ -18,11 +16,7 @@ export class PopoverPage implements OnInit {
   ngOnInit() {
   }
 
-  // onClick(){
-  //   this.isPopoverOpen = !this.isPopoverOpen;
-  // }
-
-  async presentPopover() {
+  async presentPopover(event: Event) {
     const popover = await this.popoverController.create({
       component: PopoverInfoComponent,
       event: event,
@@ -32,7 +26,13 @@ export class PopoverPage implements OnInit {
 
     await popover.present();
 
-    // const { role } = await popover.onDidDismiss();
-    // this.roleMsg = `Popover dismissed with role: ${role}`;
+    // const respuesta = await modal.onDidDismiss();
+    // console.log(respuesta);
+
+    // const { data } = await modal.onDidDismiss();
+    // console.log(data);
+
+    const { data } = await popover.onWillDismiss();
+    console.log(data);
   }
 }
