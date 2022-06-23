@@ -23,8 +23,8 @@
 
   <ion-list>
 
-    <!-- <ion-item *ngFor="let album of albums | async"> --> <!-- modo 1 -->
-    <ion-item *ngFor="let album of albums"> <!-- modo 2 -->
+    <ion-item *ngFor="let album of albums | async | filtro:textoBuscar:'title'"> <!-- modo 1 -->
+    <!-- <ion-item *ngFor="let album of albums | filtro:textoBuscar:'title'"> modo 2 -->
 
       <ion-label>
         {{album.title}}
